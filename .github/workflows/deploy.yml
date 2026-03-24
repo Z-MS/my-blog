@@ -11,6 +11,13 @@ permissions:
   id-token: write
 
 jobs:
+  linkChecker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Lychee Broken Link Checker
+        uses: lycheeverse/lychee-action@v2.8.0
   build:
     runs-on: ubuntu-latest
     steps:
