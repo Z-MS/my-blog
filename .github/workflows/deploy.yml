@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: Check build and deploy flag
         id: bd-flag
-        uses: configcat/cli-actions@v1
+        uses: configcat/cli-actions/eval-flag@v1
         with:
           sdk-key: ${{ secrets.CONFIGCAT_SDK_KEY}}
           flag-keys: build_and_deploy_enabled
