@@ -26,7 +26,7 @@ jobs:
           sdk-key: ${{ secrets.CONFIGCAT_SDK_KEY}}
           flag-keys: build_and_deploy_enabled
       - name: Output build and deploy flag value
-        run: echo "Build and Deploy Enabled ${{ steps.bd-flag.outputs.build_and_deploy_enabled }}"
+        run: echo "Build and Deploy Enabled ${{ steps.bd-flag.outputs.build_and_deploy_enabled == 'false' }}"
   linkChecker:
     runs-on: ubuntu-latest
     steps:
